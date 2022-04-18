@@ -1,10 +1,9 @@
 <template>
   <div id="app">
     <Header :ojt2title=ojt2title />
-    <FirstContent/>
+    <FirstContent />
     <SecondContent :movies=movies />
-    <ThirdContent/>
-    <Footer/>
+    <ThirdContent />
   </div>
 </template>
 

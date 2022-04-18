@@ -6,7 +6,7 @@
         <li class="movie-list"
         v-for="movie in movies"
         :movie="movie"
-        :key="movie.name">
+        :key="movie.id">
           {{ movie.name }}
         </li>
       </ul>
