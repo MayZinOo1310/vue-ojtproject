@@ -1,92 +1,91 @@
 <template id="thirdojt">
-  <div class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <form @submit.prevent="validate">
-          <div class="form-group row">
-            <label class="col-sm-3" for="name">Name:</label>
-            <div class="col-sm-9">
-              <input
-                class="form-control"
-                type="text"
-                v-bind:class="{ 'is-invalid': nameError }"
-                id="name"
-                placeholder=""
-                v-model="name"
-                required
-              />
-              <div class="invalid-feedback" id="feedback-1" v-if="errors[0]">
-                {{ errors[0].message }}
+  <div class="thirdojt">
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form @submit.prevent="validate">
+            <div class="form-group row">
+              <label class="col-sm-3" for="name">Name:</label>
+              <div class="col-sm-9">
+                <input
+                  class="form-control"
+                  type="text"
+                  v-bind:class="{ 'is-invalid': nameError }"
+                  id="name"
+                  placeholder=""
+                  v-model="name"
+                  required
+                />
+                <div class="invalid-feedback" id="feedback-1" v-if="errors[0]">
+                  {{ errors[0].message }}
+                </div>
               </div>
             </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-sm-3" for="email">Email:</label>
-            <div class="col-sm-9">
-              <input
-                type="text"
-                class="form-control"
-                v-bind:class="{ 'is-invalid': emailError }"
-                id="email"
-                placeholder=""
-                v-model="email"
-                required
-              />
-              <div class="invalid-feedback" id="feedback-2" v-if="errors[1]">
-                {{ errors[1].message }}
+            <div class="form-group row">
+              <label class="col-sm-3" for="email">Email:</label>
+              <div class="col-sm-9">
+                <input
+                  type="text"
+                  class="form-control"
+                  v-bind:class="{ 'is-invalid': emailError }"
+                  id="email"
+                  placeholder=""
+                  v-model="email"
+                  required
+                />
+                <div class="invalid-feedback" id="feedback-2" v-if="errors[1]">
+                  {{ errors[1].message }}
+                </div>
               </div>
             </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-sm-3" for="url">Url:</label>
-            <div class="col-sm-9">
-              <input
-                class="form-control"
-                type="url"
-                v-bind:class="{ 'is-invalid': urlError }"
-                id="url"
-                placeholder=""
-                v-model="url"
-                required
-              />
-              <div class="invalid-feedback" id="feedback-3" v-if="errors[2]">
-                {{ errors[2].message }}
+            <div class="form-group row">
+              <label class="col-sm-3" for="url">Url:</label>
+              <div class="col-sm-9">
+                <input
+                  class="form-control"
+                  type="url"
+                  v-bind:class="{ 'is-invalid': urlError }"
+                  id="url"
+                  placeholder=""
+                  v-model="url"
+                  required
+                />
+                <div class="invalid-feedback" id="feedback-3" v-if="errors[2]">
+                  {{ errors[2].message }}
+                </div>
               </div>
             </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-sm-3" for="phno">Phone Number:</label>
-            <div class="col-sm-9">
-              <input
-                type="text"
-                class="form-control"
-                v-bind:class="{ 'is-invalid': phnoError }"
-                id="phno"
-                placeholder=""
-                v-model="phno"
-                required
-              />
-              <div class="invalid-feedback" id="feedback-4" v-if="errors[3]">
-                {{ errors[3].message }}
+            <div class="form-group row">
+              <label class="col-sm-3" for="phno">Phone Number:</label>
+              <div class="col-sm-9">
+                <input
+                  type="text"
+                  class="form-control"
+                  v-bind:class="{ 'is-invalid': phnoError }"
+                  id="phno"
+                  placeholder=""
+                  v-model="phno"
+                  required
+                />
+                <div class="invalid-feedback" id="feedback-4" v-if="errors[3]">
+                  {{ errors[3].message }}
+                </div>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <button
-              class="btn btn-danger col-sm-2 m-5"
-              type="cancel"
-            >
-              Cancel
-            </button>
-            <button
-              :disabled="btndisable"
-              class="btn btn-danger col-sm-2 m-5"
-              type="submit"
-            >
-              Confirm
-            </button>
-          </div>
-        </form>
+            <div class="row">
+              <button class="btn btn-danger col-sm-2 m-5" type="cancel">
+                Cancel
+              </button>
+              <button
+                :disabled="btndisable"
+                class="btn btn-danger col-sm-2 m-5"
+                type="submit"
+              >
+                Confirm
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
 <template id="header">
   <div class="header">
     <div class="container">
-      <h1>{{ ojt2title }}</h1>
+      <h1>{{ ojt2header }}</h1>
     </div>
   </div>
 </template>
@@ -10,7 +10,7 @@
 export default {
   name: 'Header',
   template: '#header',
-  props: ['ojt2title'],
+  props: ['ojt2header'],
   data () {
     return {
       title: 'Welcome My Blog'

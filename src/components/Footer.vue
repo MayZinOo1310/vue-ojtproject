@@ -30,5 +30,6 @@ p {
   text-align:center;
   padding: 10px;
   letter-spacing: 1.5px;
+  margin-bottom: 0;
 }
 </style>

@@ -1,7 +1,7 @@
-<template id="secondojt">
+<template :movies=movies id="secondojt">
   <div class="secondojt">
     <div class="container">
-      <h2>Welcome from Movies list...</h2>
+      <h2>{{ojt2title}}</h2>
       <ul>
         <li class="movie-list"
         v-for="movie in movies"
@@ -17,8 +17,15 @@
 <script>
 export default {
   name: 'SecondContent',
-  template: '#secondojt',
-  props: ['movies']
+  template: '{{ $route.params.movies }}',
+  props: {
+    movies: Array,
+    ojt2title: String
+  },
+  data () {
+    return {
+    }
+  }
 }
 </script>
 <style>
@@ -30,11 +37,11 @@ h2{
   margin-bottom: 20px;
   font-weight: bold;
 }
-ul{
+.secondojt ul{
   max-width: 500px;
   margin: 0 auto;
 }
-ul li{
+.secondojt ul li{
   text-align: left;
   font-size: 18px;
   color: #000;

@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <Header :ojt2title=ojt2title />
+    <Header :ojt2header=ojt2header />
     <FirstContent />
-    <SecondContent :movies=movies />
+    <SecondContent :movies=movies :ojt2title=ojt2title />
     <ThirdContent />
+    <Footer />
   </div>
 </template>
 
@@ -20,7 +21,8 @@ export default {
   },
   data () {
     return {
-      ojt2title: 'Welcome from ojt project 2',
+      ojt2header: 'Welcome from ojt project 2',
+      ojt2title: 'Welcome from Movies list...',
       movies: [
         {
           name: 'English Movie'
@@ -50,5 +52,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+.nav-bar {
+  border: 1px solid #ccc;
+  height: 500px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 </style>
